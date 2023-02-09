@@ -5,9 +5,10 @@ const databasePath = path.join(__dirname, "../db/database.json");
 const database = JSON.parse(fs.readFileSync(databasePath, "utf-8"))
 
 module.exports = {
-    index:  function(req, res, next) {
-        res.render('index', {
-            title: "Pimienta & Sal",
+    details:  function(req, res, next) {
+        let product = database.find(product => product.id === Number(req.params.id))
+        res.render('detalleMenu', {
+            product,
             products: database
         });
       }

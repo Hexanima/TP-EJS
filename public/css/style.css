@@ -1316,3 +1316,12 @@ a {
 .ps-hover-border-pale-blue:hover {
   border-color: #e7ffff !important;
 }
+
+
+/* Enchufado a ultimo segundo
+   Por Nico Fili
+*/
+
+a.card-link {
+  text-decoration: none;
+}
